@@ -1,0 +1,13 @@
+# Ignore local environment and generated artifacts
+node_modules/
+.pnpm-store/
+.next/
+out/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+.vitest/
+.DS_Store
+*.log
