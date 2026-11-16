@@ -1,16 +1,25 @@
-# Agentic SDLC OS
+# Milestone 0 status
 
-This repository is intentionally empty at the start of the project. The current work is a documentation and governance foundation only, not product implementation.
+Milestone 0 repository foundation is in progress. This milestone establishes workspace tooling and package boundaries only; no product runtime is implemented.
 
-This repository is being prepared for a TypeScript monorepo implementing a local-first Agentic SDLC platform with LangGraph orchestration, Git worktree isolation, a Fastify API, a Next.js dashboard, a Node worker, Prisma-backed persistence, and Docker Model Runner integration.
+## Local setup
 
-## Current status
+Requirements: Node.js 20.11+ and pnpm 9.15.0. On Windows, when Corepack cannot write a shim to `C:\Program Files\nodejs`, run PowerShell as Administrator for `corepack enable`, or install pnpm for the current environment with `npm install --global pnpm@9.15.0` and reopen the terminal.
 
-- Repository created and initialized: yes
-- Repository content: empty, pending project bootstrap
-- Implementation boundary: documentation and architecture only
-- Active milestone: pre-Milestone 0 / approval gate
+```powershell
+pnpm install
+pnpm typecheck
+pnpm lint
+pnpm test
+```
 
-## Guiding principle
+## Workspace packages
 
-We are not implementing product code until the architecture, requirements, governance frame, and approval criteria are agreed and the next milestone boundary is explicitly approved.
+- `apps/dashboard`: future Next.js dashboard boundary; no application runtime yet.
+- `apps/web-api`: future Fastify API boundary; no server runtime yet.
+- `packages/core`: shared core foundation and its initial smoke test.
+- `services/worker`: future Node.js worker boundary; no worker runtime yet.
+
+## Repository structure
+
+The full proposed target structure is documented in `docs/architecture/monorepo-structure.md`. This milestone scaffolds only the initial workspace boundaries.
