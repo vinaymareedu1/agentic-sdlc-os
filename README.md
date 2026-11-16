@@ -1,4 +1,4 @@
-# Agentic SDLC OS
+# Milestone 0 status
 
 Milestone 0 (repository foundation) is in progress on `milestone-0-foundation`. This milestone establishes a pnpm/Turborepo workspace, strict shared TypeScript and lint configuration, initial package boundaries, CI checks, and project documentation. It does not implement application runtime behavior.
 
